@@ -1,0 +1,22 @@
+{% extends "index.njk" %}
+{% block content %}
+
+  <ul class="mdl-list">
+    {% for contact in contacts %}
+      <li class="mdl-list__item mdl-list__item--two-line">
+        <span class="mdl-list__item-primary-content">
+          <i class="material-icons mdl-list__item-avatar">person</i>
+          <span>{{ contact.name }}</span>
+          <span class="mdl-list__item-sub-title">{{ contact.email }}</span>
+          <span class="mdl-list__item-sub-title">{{ contact.bio }}</span>
+        </span>
+        <span class="mdl-list__item-secondary-content">
+          <a href="/contacts/{{ contact.id }}" class="mdl-list__item-secondary-action">
+            <i class="material-icons">edit</i>
+          </a>
+        </span>
+      </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

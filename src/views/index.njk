@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>My Contacts</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"/>
+    <script defer="defer" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <style>
+      .mdl-card,
+      .mdl-textfield {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+      <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">
+            My Contacts
+          </span>
+          <div class="mdl-layout-spacer"></div>
+          <a href="/contacts/create">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+              NEW
+            </button>
+          </a>
+        </div>
+      </header>
+
+      <div class="demo-ribbon"></div>
+
+      <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+
+          <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+
+            {% block content %}{% endblock %}
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+{% extends "index.njk" %}
+{% block content %}
+
+  <div class="mdl-card">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Edit User</h2>
+    </div>
+
+    <form method="POST" action="/contacts">
+      <input type="hidden" name="id" value="{{ contact.id }}"/>
+      <input type="hidden" name="_method" value="PUT"/>
+
+      <div class="mdl-card__supporting-text">
+        <div class="mdl-textfield mdl-js-textfield">
+          <input value="{{ contact.name }}" type="text" class="mdl-textfield__input" name="name"/>
+          <label class="mdl-textfield__label">Name...</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+          <input value="{{ contact.email }}" type="text" class="mdl-textfield__input" name="email"/>
+          <label class="mdl-textfield__label">Email...</label>
+        </div>
+
+        <div class="mdl-textfield mdl-js-textfield">
+          <textarea type="text" class="mdl-textfield__input" name="bio" rows="3">{{ contact.bio }}</textarea >
+          <label class="mdl-textfield__label">Bio...</label>
+        </div>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+          UPDATE
+        </button>
+      </div>
+    </form>
+
+    <div class="mdl-card__menu">
+      <form action="/contacts" method="POST">
+        <input type="hidden" name="_method" value="DELETE"/>
+        <input type="hidden" name="id" value="{{ contact.id }}"/>
+        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-button--accent" type="submit">
+          <i class="material-icons">delete</i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}

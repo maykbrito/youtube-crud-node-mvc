@@ -1,0 +1,22 @@
+{
+  "contacts": [
+    {
+      "id": "fd25bd5b06a6",
+      "name": "Robson",
+      "email": "robson@rocket",
+      "bio": "CEO at Rocketseat"
+    },
+    {
+      "id": "4b03348a6486",
+      "name": "Cleiton",
+      "email": "cleiton@rocket",
+      "bio": "COO at Rocketseat"
+    },
+    {
+      "id": "5d685bdc5b04",
+      "name": "Diego",
+      "email": "diego@rocket",
+      "bio": "CTO at Rocketseat"
+    }
+  ]
+}
